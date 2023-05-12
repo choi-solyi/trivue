@@ -4,15 +4,15 @@ import Header from './components/AppBar.jsx'
 import SectionTitle from './components/SectionTitle'
 import Imgs from './components/Imgs'
 import Card from './components/Card'
-// import Title from './components/Title'
+import Title from './components/Title'
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <div>
       <Header></Header>
+      <Title></Title>
       <Imgs></Imgs>
-      {/* <Title></Title> */}
       <SectionTitle name="경력"></SectionTitle>
       <Card></Card>
       <Card></Card>
