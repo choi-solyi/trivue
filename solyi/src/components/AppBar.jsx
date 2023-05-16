@@ -9,24 +9,17 @@ const AppBar = () => {
   const [coin, setCoin] = useState('')
   const navigate = useNavigate()
 
-  function onKeyDonwHandler(e) {
-    if (e.key === 'Enter') {
-      if (e.target.value === '3592') {
-        navigate('/create')
-      } else {
-        setCoin('')
-        e.target.value = ''
-      }
-    } else {
-      setCoin(e.target.value)
-    }
+  function onKeyDownHandler(e) {
+    if (e.key === 'Enter') check()
+    else setCoin(e.target.value)
   }
-  function eventHandler() {
+
+  function check() {
     if (coin.target.value === '3592') {
       navigate('/create')
     } else {
       setCoin('')
-      document.getElementById('text-field').value = ''
+      document.getElementById('inputcoin').value = ''
     }
   }
 
@@ -51,16 +44,17 @@ const AppBar = () => {
         </div>
         <TextField
           size="small"
-          id="outlined-basic"
+          id="inputcoin"
           label="Insert Coin"
           variant="outlined"
-          onKeyDown={onKeyDonwHandler}
+          onKeyDown={onKeyDownHandler}
+          onChange={val => setCoin(val)}
         />
         <IconButton
           className="order-last sm:px-5  xs:py-2"
           aria-label="fingerprint"
           color="secondary"
-          onClick={eventHandler}
+          onClick={check}
         >
           <Fingerprint />
         </IconButton>
