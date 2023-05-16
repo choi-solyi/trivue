@@ -1,4 +1,8 @@
-const Card = () => {
+import { findProjectList } from '../plugins/firestore'
+const Card = ({ type }) => {
+  if (type === 'project') {
+    findProjectList()
+  }
   return (
     <div className="px-40 sm:p-12 xs:p-12">
       <div className="lg:mx-40  p-16 bg-white hover:bg-blue-50 text-black font-bold border border-blue-700 rounded-lg">

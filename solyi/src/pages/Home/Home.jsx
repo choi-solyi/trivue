@@ -12,13 +12,13 @@ function Home() {
       <Title></Title>
       <Imgs></Imgs>
       <SectionTitle name="경력"></SectionTitle>
-      <Card></Card>
+      <Card type="workexperience"></Card>
       <Card></Card>
       <SectionTitle name="프로젝트"></SectionTitle>
-      <Card></Card>
+      <Card type="project"></Card>
       <Card></Card>
       <SectionTitle name="교육/이수/자격증"></SectionTitle>
-      <Card></Card>
+      <Card type="skills"></Card>
       <Card></Card>
     </div>
   )
