@@ -7,7 +7,7 @@ const AppBar = props => {
       >
         <div className="flex lg:flex-1">
           <a
-            href="https://solyi.trivue.dev"
+            href="/"
             className="-m-1.5 p-1.5"
           >
             <span className="sr-only">Choi Solyi</span>
@@ -18,6 +18,7 @@ const AppBar = props => {
             />
           </a>
         </div>
+        <div>아이콘</div>
       </nav>
     </header>
     // <div className="w-full flex justify-center content-center">
