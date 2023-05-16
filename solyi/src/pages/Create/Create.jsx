@@ -7,7 +7,8 @@ function Create() {
 return (
     <div>
       <Header></Header>
-      <div className="px-40 sm:p-12 xs:p-12">
+      <div className="md:px-40">
+      {/* <div className="px-40 sm:p-12 xs:p-12"> */}
         <ToastEditor></ToastEditor>
         {/* {a} */}
       </div>
