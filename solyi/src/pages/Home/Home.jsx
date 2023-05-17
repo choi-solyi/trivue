@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Header from '../../components/AppBar'
 import SectionTitle from '../../components/SectionTitle'
 import Imgs from '../../components/Imgs'
 import Card from '../../components/Card'
@@ -8,7 +7,6 @@ import Title from '../../components/Title'
 function Home() {
   return (
     <div>
-      <Header></Header>
       <Title></Title>
       <Imgs></Imgs>
       <SectionTitle name="경력"></SectionTitle>

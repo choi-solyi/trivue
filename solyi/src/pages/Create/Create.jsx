@@ -4,11 +4,10 @@ import ToastEditor from '../../components/ToastEditor'
 
 // const [count, setCount] = useState(0)
 function Create() {
-return (
+  return (
     <div>
-      <Header></Header>
       <div className="md:px-40">
-      {/* <div className="px-40 sm:p-12 xs:p-12"> */}
+        {/* <div className="px-40 sm:p-12 xs:p-12"> */}
         <ToastEditor></ToastEditor>
         {/* {a} */}
       </div>
