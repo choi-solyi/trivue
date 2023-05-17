@@ -8,4 +8,19 @@
 .header {
   display: flex;
   justify-content: space-between;
+  font-size: 32px;
+}
+
+.about-me {
+  margin-top: 20%;
+  font-size: 70px;
+}
+
+.underline {
+  border-bottom: 6px solid #4EE1A0;
+
+}
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
 }
