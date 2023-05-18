@@ -7,10 +7,10 @@ import { styled } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  width: '90%',
-  height: '100px',
+  width: '100%',
+  height: '150px',
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const TransparentItem = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
-  width: '90%',
+  width: '100%',
   height: '100px',
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -76,6 +76,7 @@ function WeAre() {
       minute: '2-digit',
       month: 'long',
       day: 'numeric',
+      weekday: 'short',
     })
     setKrDay(koreaFull)
     // 토론토 시간
@@ -86,6 +87,7 @@ function WeAre() {
       minute: '2-digit',
       month: 'long',
       day: 'numeric',
+      weekday: 'short',
     })
     setTrtDay(torontoFull)
 
@@ -97,6 +99,7 @@ function WeAre() {
       minute: '2-digit',
       month: 'long',
       day: 'numeric',
+      weekday: 'short',
     })
     setVcvDay(vancouverFull)
   }, [])
@@ -109,6 +112,7 @@ function WeAre() {
       minute: '2-digit',
       month: 'long',
       day: 'numeric',
+      weekday: 'short',
     })
     setKrDay(koreaFull)
 
@@ -119,6 +123,7 @@ function WeAre() {
       minute: '2-digit',
       month: 'long',
       day: 'numeric',
+      weekday: 'short',
     })
     setTrtDay(torontoFull)
 
@@ -131,6 +136,7 @@ function WeAre() {
         minute: '2-digit',
         month: 'long',
         day: 'numeric',
+        weekday: 'short',
       }
     )
     setVcvDay(vancouverFull)
@@ -149,16 +155,16 @@ function WeAre() {
         >
           <Item elevation={3}>
             <div className="text-3xl text-start float-left">한국</div>
-            <div className="text-5xl  text-end">{krDay}</div>
+            <div className="lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl text-3xl text-end absolute right-2 bottom-2">{krDay}</div>
           </Item>
-          <Item elevation={3}>
+          <Item elevation={3} className="relative ">
             <div className="text-3xl text-start float-left">토론토</div>
-            <div className="text-4xl  text-end">{trtDay}</div>
+            <div className="lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-2xl text-end absolute right-2 bottom-2">{trtDay}</div>
           </Item>
-          <Item elevation={3}>
+          <Item elevation={3} className="relative ">
             <div className="text-3xl text-start float-left">밴쿠버</div>
-            <div className="text-4xl  text-end">{vcvDay}</div>
-          </Item>
+            <div className="lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-2xl text-end absolute right-2 bottom-2">{vcvDay}</div>
+         </Item>
           <TransparentItem elevation={0}>
             <Slider
               defaultValue={0}
