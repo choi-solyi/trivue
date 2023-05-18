@@ -7,8 +7,8 @@ const IconButton = () => {
     return (
         <>
         <div className="icons">
-            <img src={Github}></img>
-            <img src={Linkedin}></img>
+            <a href="https://github.com/flo2seul"><img src={Github}></img></a>
+            <a href="https://www.linkedin.com/in/seulayoon/"><img src={Linkedin}></img></a>
         </div>
         </>
     )
