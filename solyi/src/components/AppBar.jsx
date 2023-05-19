@@ -24,9 +24,9 @@ const AppBar = () => {
   }
 
   return (
-    <header className="bg-my-color">
+    <header className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
       <nav
-        className="my-8 flex item-center"
+        className="my-4 flex item-center"
         aria-label="Global"
       >
         <div className="flex flex-1">

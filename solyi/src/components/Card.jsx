@@ -4,11 +4,13 @@ const Card = ({ type }) => {
     findProjectList()
   }
   return (
-    <div className="px-40 sm:p-12 xs:p-12">
-      <div className="lg:mx-40  p-16 bg-white hover:bg-blue-50 text-black font-bold border border-blue-700 rounded-lg">
-        <div className="text-2xl float-right">2020.12.12~2021.10.14</div>
-        <div className="text-3xl">asdfasdf</div>
-        <div className="text-md my-10">
+    <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6">
+      <div className="my-12 p-4 bg-white hover:bg-blue-50 text-black font-bold border border-blue-700 rounded-lg">
+        <div className="py-4">
+          <div className="text-3xl float-left">asdfasdf</div>
+          <div className="text-2xl float-right">2020.12.12~2021.10.14</div>
+        </div>
+        <div className="text-md my-10 float-none">
           <p className="my-4">
             An optimist is a person who sees a green light everywhere, while the
             pessimist sees only the red spotlight... The truly wise person is
