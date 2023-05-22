@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+}
+
+#root {
+  width:100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #121212;
+}
+
+li{
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #121212;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: #ededed;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  
+}
+
+.navbar_menu > ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 5px 12px;
+}
+
+.navbar_icons{
+  list-style: none;
+  display: flex;
+}
+
+.navbar_icons li{
+  padding: 5px 12px;
+}
