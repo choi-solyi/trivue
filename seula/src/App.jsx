@@ -3,7 +3,8 @@ import './App.css'
 import IconButton from './components/IconButton'
 
 function App() {
-
+  const skills = ["HTML", "CSS", "JavaScript", "React", "Java", "Spring", "MySQL", "Linux"]
+  const expSkills = ["HTML", "CSS", "JavaScript"]
 
   return (
     <>
@@ -18,8 +19,18 @@ function App() {
             <span>I&apos;m </span>
             <span className='underline'>Seula Yoon.</span>
           </div>
-          <p className='paragraph'>Based in the Canda, I&apos;m software engineer</p>
+          <p className='paragraph'>Based in the Canda, I&apos;m software engineer
+          <br/>passionate about making accessible product <br/>that users love.</p>
         </div>
+        <div className="skills" >
+       
+          {
+            skills.map((skill, i)=>{
+              return <div className="skill-item" key={i}>{skill}</div>
+            })
+          }
+      
+          </div>
         <div className="projects"></div>
       </div>
     </>
