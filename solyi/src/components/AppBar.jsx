@@ -5,6 +5,8 @@ import IconButton from '@mui/material/IconButton'
 import Fingerprint from '@mui/icons-material/Fingerprint'
 import { useNavigate } from 'react-router'
 
+import logo from '../assets/logo/simple-light-logo.png'
+
 const AppBar = () => {
   const [coin, setCoin] = useState('')
   const navigate = useNavigate()
@@ -36,8 +38,8 @@ const AppBar = () => {
           >
             <span className="sr-only">Choi Solyi</span>
             <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              className="h-16 w-auto"
+              src={logo}
               alt=""
             />
           </a>
@@ -49,6 +51,7 @@ const AppBar = () => {
           variant="outlined"
           onKeyDown={onKeyDownHandler}
           onChange={val => setCoin(val)}
+          className="m-4"
         />
         <IconButton
           className="order-last sm:px-5  xs:py-2"
