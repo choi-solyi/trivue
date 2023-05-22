@@ -2,23 +2,23 @@ const Imgs = props => {
   return (
     <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
       <div className="bg-my-bg-color text-center text-5xl  py-12 sm:py-32 grid lg:grid-cols-6 gap-6">
-        <button className="lg:col-span-2 lg:row-span-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          01
+        <button className="bg-my-color-1 lg:col-span-2 lg:row-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          Engineer
         </button>
-        <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          02
+        <button className="bg-my-color-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          Learn
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          03
+        <button className="bg-my-color-3 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          CHOI
         </button>
-        <button className="lg:col-span-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          04
+        <button className="bg-my-color-5 lg:col-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          Sol
         </button>
-        <button className="lg:col-span-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          05
+        <button className="bg-my-color-4 lg:col-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          HAHA
         </button>
-        <button className="lg:col-span-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-16 px-4 border border-blue-700 rounded-lg">
-          06
+        <button className="bg-my-color-6 lg:col-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
+          yi
         </button>
       </div>
     </div>
