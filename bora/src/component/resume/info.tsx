@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../assets/css/info.css";
 
 export const Info = ({ path }): React.ReactElement => {
