@@ -9,7 +9,7 @@ import '@toast-ui/editor/dist/toastui-editor.css'
 // container lg:px-12 md:p-8 sm:p-6 xs:p-4 p-4 mx-auto
 function App() {
   return (
-    <div className="bg-my-color mx-auto">
+    <div className="bg-my-bg-color mx-auto">
       {/* <GlobalStyles styles={{ input: inputGlobal }} /> */}
       <Routes></Routes>
     </div>

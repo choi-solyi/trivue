@@ -7,7 +7,6 @@ import { styled } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
 import SectionTitle from '../../components/SectionTitle'
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   width: '100%',
   height: '100px',
@@ -50,6 +49,7 @@ function WeAre() {
   const [krDay, setKrDay] = useState('')
   const [trtDay, setTrtDay] = useState('')
   const [vcvDay, setVcvDay] = useState('')
+  const [dbiDay, setDubaiDay] = useState('')
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -85,6 +85,12 @@ function WeAre() {
       'America/Vancouver'
     )
     setVcvDay(vancouverFull)
+
+    const dubaiFull = getFormattedDate(
+      addHours(currentDate, plusHour),
+      'Asia/Dubai'
+    )
+    setDubaiDay(dubaiFull)
   }
 
   function moveSlider(event, plusHour) {
@@ -101,7 +107,7 @@ function WeAre() {
         >
           <Item
             elevation={3}
-            className="relative "
+            className="relative"
           >
             <div className="text-3xl text-start float-left">한국</div>
             <div className="lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl text-3xl text-end absolute right-2 bottom-2">
@@ -110,7 +116,7 @@ function WeAre() {
           </Item>
           <Item
             elevation={3}
-            className="relative "
+            className="relative"
           >
             <div className="text-3xl text-start float-left">토론토</div>
             <div className="lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-2xl text-end absolute right-2 bottom-2">
@@ -119,11 +125,20 @@ function WeAre() {
           </Item>
           <Item
             elevation={3}
-            className="relative "
+            className="relative"
           >
             <div className="text-3xl text-start float-left">밴쿠버</div>
             <div className="lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-2xl text-end absolute right-2 bottom-2">
               {vcvDay}
+            </div>
+          </Item>
+          <Item
+            elevation={3}
+            className="relative"
+          >
+            <div className="text-3xl text-start float-left">두바이</div>
+            <div className="lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-2xl text-end absolute right-2 bottom-2">
+              {dbiDay}
             </div>
           </Item>
           <TransparentItem elevation={0}>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SectionTitle from '../../components/SectionTitle'
 import Imgs from '../../components/Imgs'
 import Card from '../../components/Card'
+import ImgCard from '../../components/ImgCard'
 import Title from '../../components/Title'
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
       <Card></Card>
       <SectionTitle name="프로젝트"></SectionTitle>
       <Card type="project"></Card>
+      <ImgCard></ImgCard>
       <Card></Card>
       <SectionTitle name="교육/이수/자격증"></SectionTitle>
       <Card type="skills"></Card>
