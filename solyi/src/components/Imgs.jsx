@@ -1,10 +1,16 @@
+import snowimg from '../assets/snow.jpg'
 const Imgs = props => {
   return (
     <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
       <div className="bg-my-bg-color text-center text-5xl  py-12 sm:py-32 grid lg:grid-cols-6 gap-6">
-        <button className="bg-my-color-1 lg:col-span-2 lg:row-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
-          Engineer
-        </button>
+        <div
+          className="  bg-my-color-1 lg:col-span-2 lg:row-span-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg"
+          style={{
+            backgroundImage: `url(${snowimg})`,
+            backgroundSize: 'cover',
+          }}
+        ></div>
+        {/* <button>Engineer</button> */}
         <button className="bg-my-color-2 hover:bg-my-color-8 text-white font-bold py-16 px-4 border rounded-lg">
           Learn
         </button>
