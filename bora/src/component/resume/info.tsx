@@ -7,7 +7,15 @@ export const Info = ({ path }): React.ReactElement => {
       <section className="info_section">
         <div className="photo_zone">
           <div className="img_container">
-            <img src={path} alt="myPhoto" />
+            {/* <img src={path} alt="myPhoto" /> */}
+            <span
+              style={{
+                display: "inline-block",
+                width: 180,
+                height: 230,
+                border: "1px solid #888",
+              }}
+            ></span>
           </div>
         </div>
         <div className="info_zone">
