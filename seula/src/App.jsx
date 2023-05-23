@@ -1,10 +1,11 @@
-import React from "react";
+import { v4 } from "uuid";
 import './App.css'
 import IconButton from './components/IconButton'
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const skills = ["HTML", "CSS", "JavaScript", "React", "Java", "Spring", "MySQL", "Linux"]
-  const expSkills = ["HTML", "CSS", "JavaScript"]
+  // const expSkills = ["HTML", "CSS", "JavaScript"]
 
   return (
     <>
@@ -31,7 +32,12 @@ function App() {
           }
       
           </div>
-        <div className="projects"></div>
+        <div className="projects">
+          <div className="projects-title">Projects</div>
+          <div className="cards">
+              <ProjectCard key={v4()} />
+          </div>
+          </div>
       </div>
     </>
   )
