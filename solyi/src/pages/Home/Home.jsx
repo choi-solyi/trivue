@@ -9,11 +9,11 @@ function Home() {
     <div>
       {/* <Title></Title> */}
       <Imgs></Imgs>
-      <SectionTitle name="프로젝트"></SectionTitle>
+      <SectionTitle name="Project"></SectionTitle>
       <ImgCards>{/* project */}</ImgCards>
-      <SectionTitle name="경력"></SectionTitle>
+      <SectionTitle name="Work experience"></SectionTitle>
       <Accordions>{/* workexperience */}</Accordions>
-      <SectionTitle name="교육/이수/자격증"></SectionTitle>
+      <SectionTitle name="Skills"></SectionTitle>
       <Card type="">{/* skills */}</Card>
     </div>
   )

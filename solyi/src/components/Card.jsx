@@ -5,12 +5,12 @@ const Card = ({ type }) => {
   }
   return (
     <div className="xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
-      <div className="my-12 p-4 bg-white hover:bg-blue-50 text-black font-bold border border-blue-700 rounded-lg">
+      <div className="p-4 mx-4 my-12 font-bold text-black bg-white border border-blue-700 rounded-lg hover:bg-blue-50">
         <div className="py-4">
-          <div className="text-3xl float-left">asdfasdf</div>
-          <div className="text-2xl float-right">2020.12.12~2021.10.14</div>
+          <div className="float-left text-3xl">asdfasdf</div>
+          <div className="float-right text-2xl">2020.12.12~2021.10.14</div>
         </div>
-        <div className="text-md my-10 float-none">
+        <div className="float-none my-10 text-md">
           <p className="my-4">
             An optimist is a person who sees a green light everywhere, while the
             pessimist sees only the red spotlight... The truly wise person is
@@ -28,10 +28,10 @@ const Card = ({ type }) => {
             anyone else do it either.
           </p>
         </div>
-        <span className="text-md mx-2 p-1 border border-gray-400 rounded-lg">
+        <span className="p-1 mx-2 border border-gray-400 rounded-lg text-md">
           asdfasdf
         </span>
-        <span className="text-md mx-2 p-1 border border-gray-400 rounded-lg">
+        <span className="p-1 mx-2 border border-gray-400 rounded-lg text-md">
           asdfasdf
         </span>
       </div>

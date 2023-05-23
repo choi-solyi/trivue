@@ -25,13 +25,9 @@ const theme = createTheme({
 })
 function App() {
   return (
-    // <div className="mx-auto bg-my-bg-color">
-    //   {/* <GlobalStyles styles={{ input: inputGlobal }} /> */}
-    //   <Routes></Routes>
-    // </div>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className="mx-auto bg-my-bg-color">
+      <div className="mx-auto !bg-my-bg-color">
         {/* <GlobalStyles styles={{ input: inputGlobal }} /> */}
         <Routes></Routes>
         <Footer />

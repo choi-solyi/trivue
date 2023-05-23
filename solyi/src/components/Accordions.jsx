@@ -13,7 +13,7 @@ const Accordions = ({ type }) => {
   }
 
   return (
-    <div className="mb-10 xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
+    <div className="mx-4 mb-10 xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
       <Accordion
         expanded={expanded === 'panel1'}
         onChange={handleChange('panel1')}
