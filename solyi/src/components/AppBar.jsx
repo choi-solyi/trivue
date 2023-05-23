@@ -26,9 +26,9 @@ const AppBar = () => {
   }
 
   return (
-    <header className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
+    <header className="mx-4 xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
       <nav
-        className="my-4 flex item-center"
+        className="flex my-2 item-center"
         aria-label="Global"
       >
         <div className="flex flex-1">
@@ -38,23 +38,25 @@ const AppBar = () => {
           >
             <span className="sr-only">Choi Solyi</span>
             <img
-              className="h-16 w-auto"
+              className="w-auto "
               src={logo}
               alt=""
             />
           </a>
         </div>
-        <TextField
-          size="small"
-          id="inputcoin"
-          label="Insert Coin"
-          variant="outlined"
-          onKeyDown={onKeyDownHandler}
-          onChange={val => setCoin(val)}
-          className="m-4"
-        />
+        <div className="my-auto ">
+          <TextField
+            size="small"
+            id="inputcoin"
+            label="Insert Coin"
+            variant="outlined"
+            onKeyDown={onKeyDownHandler}
+            onChange={val => setCoin(val)}
+           
+            />
+        </div>
         <IconButton
-          className="order-last sm:px-5  xs:py-2"
+          className="order-last sm:px-5 xs:py-2"
           aria-label="fingerprint"
           color="secondary"
           onClick={check}

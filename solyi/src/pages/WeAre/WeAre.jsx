@@ -97,7 +97,7 @@ function WeAre() {
     setPlusHour(plusHour)
   }
   return (
-    <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
+    <div className="xl:mx-68 lg:mx-24 md:mx-16 sm:mx-6 mx-4">
       <SectionTitle name="시차 (We Are)"></SectionTitle>
       <Box sx={{ width: '100%' }}>
         <Stack

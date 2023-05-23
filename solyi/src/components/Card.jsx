@@ -4,7 +4,7 @@ const Card = ({ type }) => {
     findProjectList()
   }
   return (
-    <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6">
+    <div className="xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
       <div className="my-12 p-4 bg-white hover:bg-blue-50 text-black font-bold border border-blue-700 rounded-lg">
         <div className="py-4">
           <div className="text-3xl float-left">asdfasdf</div>

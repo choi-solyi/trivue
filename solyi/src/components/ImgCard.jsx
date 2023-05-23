@@ -34,7 +34,7 @@ const ImgCard = ({ name }) => {
   }
 
   return (
-    <div className="xl:mx-48 lg:mx-24 md:mx-16 sm:mx-6">
+    <div className="xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
       <Card sx={{ maxWidth: 345 }}>
         <CardHeader
           avatar={
