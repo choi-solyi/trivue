@@ -1,6 +1,6 @@
 // import './App.css'
-import Header from '../../components/AppBar'
-import ToastEditor from '../../components/ToastEditor'
+import Header from '../../components/layout/AppBar'
+import ToastEditor from '../../components/editor/ToastEditor'
 
 // const [count, setCount] = useState(0)
 function Create() {

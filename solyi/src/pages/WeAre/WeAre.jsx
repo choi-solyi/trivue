@@ -5,7 +5,8 @@ import Slider from '@mui/material/Slider'
 import Paper from '@mui/material/Paper'
 import { styled } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
-import SectionTitle from '../../components/SectionTitle'
+import SectionTitle from '../../components/layout/SectionTitle'
+
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   width: '100%',

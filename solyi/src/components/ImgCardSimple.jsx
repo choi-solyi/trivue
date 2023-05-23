@@ -43,8 +43,7 @@ const ImgCard = ({ name }) => {
           </IconButton>
         }
         title="Shrimp and Chorizo Paella"
-        subheader="
-        Last updated 2023.05.23"
+        subheader="September 14, 2016"
       />
       <CardMedia
         component="img"

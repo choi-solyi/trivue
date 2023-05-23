@@ -1,25 +1,20 @@
-import { useState } from 'react'
-import SectionTitle from '../../components/SectionTitle'
-import Imgs from '../../components/Imgs'
+import SectionTitle from '../../components/layout/SectionTitle'
+import Imgs from '../../components/home/MainItems'
 import Card from '../../components/Card'
-import ImgCard from '../../components/ImgCard'
-import Title from '../../components/Title'
+import ImgCards from '../../components/ImgCardList'
+import Accordions from '../../components/Accordions'
 
 function Home() {
   return (
     <div>
-      <Title></Title>
+      {/* <Title></Title> */}
       <Imgs></Imgs>
-      <SectionTitle name="경력"></SectionTitle>
-      <Card type="workexperience"></Card>
-      <Card></Card>
       <SectionTitle name="프로젝트"></SectionTitle>
-      <Card type="project"></Card>
-      <ImgCard></ImgCard>
-      <Card></Card>
+      <ImgCards>{/* project */}</ImgCards>
+      <SectionTitle name="경력"></SectionTitle>
+      <Accordions>{/* workexperience */}</Accordions>
       <SectionTitle name="교육/이수/자격증"></SectionTitle>
-      <Card type="skills"></Card>
-      <Card></Card>
+      <Card type="">{/* skills */}</Card>
     </div>
   )
 }
