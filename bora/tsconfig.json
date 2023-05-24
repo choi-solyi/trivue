@@ -9,13 +9,15 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "removeComments": true,
-    "jsx": "react",
+    // "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitAny": false,
     "strictFunctionTypes": false,
     "strictNullChecks": false,
-    "typeRoots": ["node_modules/@types", "src/assets/image.type.ts",]
+    "typeRoots": ["node_modules/@types", "src/assets/image.type.ts",],
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions":true
   },
   "include": ["./src/**/*", "@type"]
 }
