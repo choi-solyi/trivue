@@ -6,8 +6,7 @@ export const Info = ({ path }): React.ReactElement => {
   const [info, setInfo] = React.useState({ content: null });
   const handleVerifyScheduleLog = async () => {
     try {
-      const temp = await getCollectionData("resume", "info");
-      setInfo(temp);
+      setInfo(await getCollectionData("resume", "info"));
     } catch (e) {
       console.log(e);
     }
