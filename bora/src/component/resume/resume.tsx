@@ -3,11 +3,12 @@ import "../../assets/css/skill.css";
 import { Info } from "./info";
 import { Skill } from "./skill";
 import { Career } from "./career";
+import photoPath from "../../assets/photo.jpg";
 
-export const Resume = ({ path }): React.ReactElement => {
+export const Resume = (): React.ReactElement => {
   return (
     <>
-      <Info path={path} />
+      <Info path={photoPath} />
       <Skill />
       <Career />
     </>
