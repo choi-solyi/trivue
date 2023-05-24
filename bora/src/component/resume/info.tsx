@@ -17,7 +17,7 @@ export const Info = ({ path }): React.ReactElement => {
   }, []);
 
   if (!info.content) {
-    return <></>;
+    return <> loading ... </>;
   }
 
   return (
