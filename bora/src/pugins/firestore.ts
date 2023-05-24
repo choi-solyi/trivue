@@ -21,7 +21,7 @@ export const getProjectData = async () => {
   }
 };
 
-export const getCollection = async (collectionName, documentName) => {
+export const getCollectionData = async (collectionName, documentName) => {
   try {
     const projectRef = collection(db, "bora", "project", collectionName);
     const q = query(projectRef);

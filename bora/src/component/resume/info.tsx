@@ -1,12 +1,12 @@
 import React from "react";
 import "../../assets/css/info.css";
-import { getCollection } from "../../pugins/firestore";
+import { getCollectionData } from "../../pugins/firestore";
 
 export const Info = ({ path }): React.ReactElement => {
   const [info, setInfo] = React.useState({ content: null });
   const handleVerifyScheduleLog = async (id = null) => {
     try {
-      const temp = await getCollection("resume", "info");
+      const temp = await getCollectionData("resume", "info");
       setInfo(temp);
     } catch (e) {
       console.log(e);
