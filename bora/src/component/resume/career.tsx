@@ -1,7 +1,9 @@
 import React from "react";
 import "../../assets/css/career.css";
+import useGetUrlSearchParams from "../../common/getUrl";
 
-export const Career = (): React.ReactElement => {
+export const Career = () => {
+  const activePivot = useGetUrlSearchParams("/");
   return (
     <>
       <section className="career_container flex-container">

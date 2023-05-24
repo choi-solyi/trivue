@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { faFish, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faFish, faBars, faCocktail } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 export const Nav = (): React.ReactElement => {
@@ -8,7 +8,7 @@ export const Nav = (): React.ReactElement => {
     <>
       <nav className="navbar">
         <div className="navbar_logo">
-          <FontAwesomeIcon icon={faFish} style={{ color: "#193dd8" }} />
+          <FontAwesomeIcon icon={faCocktail} style={{ color: "#193dd8" }} />
           <Link className="link" to={"/"} style={{ paddingLeft: 10 }}>
             BORA YANG
           </Link>

@@ -1,32 +1,39 @@
 import React from "react";
 import "../../assets/css/info.css";
+import { getCollection } from "../../pugins/firestore";
 
 export const Info = ({ path }): React.ReactElement => {
+  const [info, setInfo] = React.useState({ content: null });
+  const handleVerifyScheduleLog = async (id = null) => {
+    try {
+      const temp = await getCollection("resume", "info");
+      setInfo(temp);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  React.useEffect(() => {
+    handleVerifyScheduleLog();
+    console.log(info);
+  }, []);
+
+  if (!info.content) {
+    return <></>;
+  }
+
   return (
     <>
       <section className="info_section">
         <div className="photo_zone">
           <div className="img_container">
-            {/* <img src={path} alt="myPhoto" /> */}
-            <span
-              style={{
-                display: "inline-block",
-                width: 180,
-                height: 230,
-                border: "1px solid #888",
-              }}
-            ></span>
+            <img src={path} alt="myPhoto" />
           </div>
         </div>
         <div className="info_zone">
           <h1>Find Top Talent</h1>
           <h1>FULL STACK PROGRAMMER</h1>
-          <p>
-            Turn traffic into sales with a beautiful landing page—a place where
-            your business or brand can shine online. Start a contest and our
-            designers will create a quality landing page design you’ll love,
-            guaranteed.
-          </p>
+          <p>{info.content}</p>
         </div>
       </section>
     </>
