@@ -29,9 +29,7 @@ export const getCollectionData = async (collectionName, documentName) => {
     let result;
 
     querySnapshot.forEach((doc) => {
-      if (doc.id === documentName) {
-        result = { ...doc.data() };
-      }
+      if (doc.id === documentName) result = { ...doc.data() };
     });
 
     return result;

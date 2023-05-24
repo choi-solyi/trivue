@@ -4,7 +4,7 @@ import { getCollectionData } from "../../pugins/firestore";
 
 export const Info = ({ path }): React.ReactElement => {
   const [info, setInfo] = React.useState({ content: null });
-  const handleVerifyScheduleLog = async (id = null) => {
+  const handleVerifyScheduleLog = async () => {
     try {
       const temp = await getCollectionData("resume", "info");
       setInfo(temp);
@@ -15,7 +15,6 @@ export const Info = ({ path }): React.ReactElement => {
 
   React.useEffect(() => {
     handleVerifyScheduleLog();
-    console.log(info);
   }, []);
 
   if (!info.content) {
