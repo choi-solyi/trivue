@@ -6,7 +6,7 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 export const Skill = (): React.ReactElement => {
   return (
     <>
-      <section className="skill_section">
+      <section className="section2 middle">
         <div className="skill_explain flex-container flex-col">
           <div className="line_first">EXPLORE SERVICES CATEGORY</div>
           <div className="line_second">

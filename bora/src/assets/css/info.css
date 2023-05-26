@@ -1,11 +1,3 @@
-.info_section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 340px;
-  background-color: #ededed;
-}
-
 .img_container {
   margin: 0 auto;
   text-align: center;

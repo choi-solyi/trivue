@@ -22,7 +22,7 @@ export const Info = ({ path }): React.ReactElement => {
 
   return (
     <>
-      <section className="info_section">
+      <section className="section1 flex-container justify-center">
         <div className="photo_zone">
           <div className="img_container">
             <img src={path} alt="myPhoto" />
