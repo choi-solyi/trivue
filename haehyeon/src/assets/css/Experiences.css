@@ -1,0 +1,21 @@
+.exp_section {
+  justify-content: center;
+  width: 100%;
+  min-height: 400px;
+  margin: auto 0;
+  padding: 50px 140px;
+  background-color: #fffaf0;
+}
+
+.line_first {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 3px;
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 35px;
+  margin-bottom: 150px;
+}
