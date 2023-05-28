@@ -16,26 +16,19 @@ import { initializeApp } from 'firebase/app'
 const app = firebase.initializeApp(firebaseConfig)
 
 export async function findProjectList() {
-  console.log('findProjectList')
-
   const db = getFirestore(app)
+  const projectList = []
   // const storage = getStorage()
   try {
-    //getDoc
-    const docRef = doc(db, 'solyi', 'project')
-    const docSnap = await getDoc(docRef)
-    if (docSnap.exists) {
-      console.log('DocData:', docSnap.data())
-    }
-
     //getDocs
-    const projectRef = collection(db, 'solyi', 'project', '1')
+    const projectRef = collection(db, 'solyi', 'portfolio', 'project')
     const q = query(projectRef)
     const querySnapshot = await getDocs(q)
     querySnapshot.forEach(doc => {
-      console.log('DocId:', doc.id)
-      console.log('DocData:', doc.data())
+      projectList.push({ id: doc.id, data: doc.data() })
     })
+
+    return projectList
   } catch (e) {
     console.log('Error:', e)
   }

@@ -27,24 +27,36 @@ const ExpandMore = styled(props => {
   }),
 }))
 
-const ImgCard = ({ name }) => {
+const ImgCard = props => {
   const [expanded, setExpanded] = React.useState(false)
+  const { name, item } = props
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
-
+  const updated =
+    'Updated ' +
+    new Date(item.updated.seconds * 1000).toLocaleString('ko-KR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  const handleClick = () => {
+    window.open(item.url, '_blank')
+  }
   return (
     <Card>
       <CardHeader
         action={
-          <IconButton aria-label="settings">
+          <IconButton
+            aria-label="settings"
+            onClick={handleClick}
+          >
             <OpenInFullIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="
-        Last updated 2023.05.23"
+        title={item.title}
+        subheader={updated.toString()}
       />
       <CardMedia
         component="img"
