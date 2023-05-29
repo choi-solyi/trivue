@@ -22,6 +22,32 @@ const theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+  palette: {
+    mycolor1: {
+      main: '#755CDE',
+    },
+    mycolor2: {
+      main: '#F6A560',
+    },
+    mycolor3: {
+      main: '#F39E9E',
+    },
+    mycolor4: {
+      main: '#EB7565',
+    },
+    mycolor5: {
+      main: '#61C4B7',
+    },
+    mycolor6: {
+      main: '#552049',
+    },
+    mycolor7: {
+      main: '#030303',
+    },
+    mycolor8: {
+      main: '#7A746E',
+    },
+  },
 })
 function App() {
   return (
