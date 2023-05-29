@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 import '../styles/ProjectCard.css';
-import Github from "../assets/github.svg";
+
 const ProjectCard = () => {
     const cardInfo = [
         {img:"images/tipCalculator.png",title:"CAT-MEME-MAKER",src: "", skills: "HTML, CSS, React"},

@@ -2,6 +2,7 @@ import { v4 } from "uuid";
 import './App.css'
 import IconButton from './components/IconButton'
 import ProjectCard from "./components/ProjectCard";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   const skills = ["HTML", "CSS", "JavaScript", "React", "Java", "Spring", "MySQL", "Linux"]
@@ -22,6 +23,7 @@ function App() {
           </div>
           <p className='paragraph'>Based in the Canda, I&apos;m software engineer
           <br/>passionate about making accessible product <br/>that users love.</p>
+          <ContactMe />
         </div>
         <div className="skills" >
        
