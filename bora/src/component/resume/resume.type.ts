@@ -29,3 +29,13 @@ interface ICareerContents {
   content: string[];
   period: string;
 }
+
+export interface IEducation {
+  education: IEducationContents[]
+}
+
+interface IEducationContents {
+  school: string;
+  period: string;
+  graduation: boolean;
+}

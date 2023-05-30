@@ -1,4 +1,5 @@
-import { ICareer, IInfo, ISkill } from './resume.type';
+import { Education } from './education';
+import { ICareer, IEducation, IInfo, ISkill } from './resume.type';
 import react from '../../assets/svg/react.svg'
 import js from '../../assets/svg/js.svg'
 import ts from '../../assets/svg/ts.svg'
@@ -55,6 +56,16 @@ export const CAREER_INITIAL_VALUE:ICareer = {
         period:'',
         content : []
       }]
+    }
+  ]
+}
+
+export const EDUCATION_INITIAL_VALUE:IEducation = {
+  education :[
+    {
+      period: '',
+      school:'',
+      graduation: false,
     }
   ]
 }
