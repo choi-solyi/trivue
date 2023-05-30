@@ -7,6 +7,8 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
+import { getCollectionData } from '../../pugins/firestore';
+import { CAREER_INITIAL_VALUE } from './resume.constants';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -41,45 +43,48 @@ const a11yProps = (index: number) => {
   };
 };
 
-const Panel = ({ company }): React.ReactElement => {
+const Panel = ({ content }): React.ReactElement => {
   return (
     <Card sx={{ maxWidth: "70%", margin: "0 auto" }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          2022-03 ~
-        </Typography>
         <Typography variant="h5" component="div">
-          {company}
+          {content.project}
+        </Typography>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        ({content.position}) {content.period}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          staff
         </Typography>
         <Typography variant="body2">
-          • Effortlessly make a job-worthy resume and cover letter that gets you
-          hired faster
-          <br />
-          • Effortlessly make a job-worthy resume and cover letter that gets you
-          hired faster
-          <br />
-          • Effortlessly make a job-worthy resume and cover letter that gets you
-          hired faster
-          <br />
-          <br />
-          {'"a benevolent smile"'}
+          {content.content.map((item,index)=><div key={index}>• {item}</div>)}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">home page</Button>
-      </CardActions>
     </Card>
   );
 };
 
 const Career = (): React.ReactElement => {
-  const [value, setValue] = React.useState(0);
+  const [tabNumber, setTabNumber] = React.useState(0);
+
+  const [career, setCareer] = React.useState(CAREER_INITIAL_VALUE);
+  const handleVerifyScheduleLog = async () => {
+    try {
+      setCareer(await getCollectionData("resume", "career"));
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  React.useEffect(() => {
+    handleVerifyScheduleLog();
+  }, []);
+
+  if (!career) {
+    return <> loading ... </>;
+  }
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+    setTabNumber(newValue);
   };
 
   return (
@@ -87,25 +92,31 @@ const Career = (): React.ReactElement => {
       <Box sx={{ width: "70%", margin: "0 auto" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
-            value={value}
+            value={tabNumber}
             onChange={handleChange}
             aria-label="basic tabs example"
             centered
           >
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
+            {career.companyInfo.map((item,idx) =><Tab key={idx} label={item.companyName}{...a11yProps(idx)} />)}
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}>
-          <Panel company={"EMAX"} />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Panel company={"PIOLINK"} />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Panel company={"APPLE"} />
-        </TabPanel>
+        {career.companyInfo.map((item, idx) => {
+          return <React.Fragment key={idx}>
+            <TabPanel value={tabNumber} index={idx}>
+              <div className="line_first" style={{textAlign:'center'}}>{item.companyIntro}</div>
+            </TabPanel>
+            {item.contents.map((conent, idx2) =>{
+              return (
+                <TabPanel key={idx2} value={tabNumber} index={idx}>
+                  <Panel content={conent} />
+                </TabPanel>
+              )
+            })}
+          </React.Fragment>
+        })}
+        <CardActions>
+          <Button size="small">home page</Button>
+        </CardActions>
       </Box>
     </div>
   );

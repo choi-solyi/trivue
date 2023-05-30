@@ -10,7 +10,6 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Resume />} />
-        <Route path="/editor" Component={ResumeEditor} />
       </Routes>
     </Router>
   );

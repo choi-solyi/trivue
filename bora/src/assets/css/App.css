@@ -120,3 +120,36 @@ li{
 .middle {
   margin: auto 0;
 }
+
+.pdt5{
+  padding-top: 5px;
+}
+.pdt10{
+  padding-top: 10px;
+}
+.pdt20{
+  padding-top: 20px;
+}
+.pdt30{
+  padding-top: 30px;
+}
+
+.pdb5{
+  padding-bottom: 5px;
+}
+.pdb10{
+  padding-bottom: 10px;
+}
+.pdb20{
+  padding-bottom: 20px;
+}
+
+.pdl5{
+  padding-left: 5px;
+}
+.pdl10{
+  padding-left: 10px;
+}
+.pdl20{
+  padding-left: 20px;
+}

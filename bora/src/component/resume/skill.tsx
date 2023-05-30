@@ -3,9 +3,11 @@ import "../../assets/css/skill.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { getCollectionData } from '../../pugins/firestore';
+import { SKILL_INITIAL_VALUE, path } from './resume.constants';
+
 
 export const Skill = (): React.ReactElement => {
-  const [skill, setSkill] = React.useState({language:[]});
+  const [skill, setSkill] = React.useState(SKILL_INITIAL_VALUE);
   const handleVerifyScheduleLog = async () => {
     try {
       setSkill(await getCollectionData("resume", "skill"));
@@ -16,7 +18,6 @@ export const Skill = (): React.ReactElement => {
 
   React.useEffect(() => {
     handleVerifyScheduleLog();
-    console.log(skill)
   }, []);
 
   if (!skill) {
@@ -26,25 +27,26 @@ export const Skill = (): React.ReactElement => {
     <>
       <section className="section2 middle">
         <div className="skill_explain flex-container flex-col">
-          <div className="line_first">EXPLORE SERVICES CATEGORY</div>
+          <div className="line_first">WHAT I USE TO TELL SOFTWARE</div>
           <div className="line_second">
-            Tech services that makes your life much easier!
+            Programming Language Skills
           </div>
         </div>
         <div className="skill_card flex-col items-center justify-start gap-10">
-          {skill.language.map(item =>(<Card language={item}/>))}
+          {skill.language.map((item, idx) =>(<Card key={idx} languageItem={item}/>))}
         </div>
       </section>
     </>
   );
 };
 
-const Card = ({language}): React.ReactElement => {
+const Card = ({languageItem}): React.ReactElement => {
+  const p = path(languageItem.icon)
   return (
     <div className="flex-container flex-col items-center card_container">
-      <div className="card_label">{language}</div>
-      <FontAwesomeIcon icon={faPlane} />
-      <div style={{ padding: 15, fontSize: 10 }}>{language}</div>
+      <div className="card_label pdt10">{languageItem.name}</div>
+      <img src={p} className='pdt10' style={{width:40}}/>
+      <div style={{ padding: 15, fontSize: 10 }}>{languageItem.level}</div>
     </div>
   );
 };
