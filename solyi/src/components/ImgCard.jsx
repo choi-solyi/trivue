@@ -63,12 +63,12 @@ const ImgCard = props => {
             aria-label="settings"
             onClick={handleClick}
           >
-            <LaunchIcon />
+            {item.url && <LaunchIcon />}
           </IconButton>
         }
         title={item.title}
-        subheader={updated.toString()}
-      />
+        subheader={updated.toString() + ', ' + item.team}
+      ></CardHeader>
       <CardMedia
         component="img"
         height="400"

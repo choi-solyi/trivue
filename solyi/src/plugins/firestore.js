@@ -8,6 +8,7 @@ import {
   query,
   collection,
   setDoc,
+  orderBy,
 } from 'firebase/firestore'
 import { getStorage, ref, getDownloadURL, list } from 'firebase/storage'
 import { getAuth } from 'firebase/auth'
@@ -22,7 +23,7 @@ export async function findProjectList() {
   try {
     //getDocs
     const projectRef = collection(db, 'solyi', 'portfolio', 'project')
-    const q = query(projectRef)
+    const q = query(projectRef, orderBy('updated', 'desc'))
     const querySnapshot = await getDocs(q)
     querySnapshot.forEach(doc => {
       projectList.push({ id: doc.id, data: doc.data() })
