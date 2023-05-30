@@ -4,133 +4,82 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-
+import { useState, useEffect } from 'react'
+import { findWorkList } from '../plugins/firestore'
 const Accordions = ({ type }) => {
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = useState(false)
+  const [workList, setWorkList] = useState([])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      // 데이터 가져오기 예시 (비동기 작업)
+      const list = await findWorkList()
+
+      console.log(list)
+
+      setWorkList(list) // 상태 값 변경
+    }
+    fetchData()
+  }, [])
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false)
   }
-
   return (
     <div className="mx-4 mb-10 xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
-      <Accordion
-        expanded={expanded === 'panel1'}
-        onChange={handleChange('panel1')}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography
-            className="!text-2xl"
-            sx={{ width: '75%', flexShrink: 0 }}
-          >
-            General settings
-          </Typography>
-          <Typography
-            className="!text-lg"
-            sx={{ color: 'text.secondary' }}
-          >
-            xxxx.xx.xx - yyyy.yy.yy
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-            Aliquam eget maximus est, id dignissim quam.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === 'panel2'}
-        onChange={handleChange('panel2')}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2bh-content"
-          id="panel2bh-header"
-        >
-          <Typography
-            className="!text-2xl"
-            sx={{ width: '75%', flexShrink: 0 }}
-          >
-            Users
-          </Typography>
-          <Typography
-            className="!text-lg"
-            sx={{ color: 'text.secondary' }}
-          >
-            xxxx.xx.xx - yyyy.yy.yy
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat
-            lectus, varius pulvinar diam eros in elit. Pellentesque convallis
-            laoreet laoreet.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === 'panel3'}
-        onChange={handleChange('panel3')}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
-        >
-          <Typography
-            className="!text-2xl"
-            sx={{ width: '75%', flexShrink: 0 }}
-          >
-            Advanced settings
-          </Typography>
-          <Typography
-            className="!text-lg"
-            sx={{ color: 'text.secondary' }}
-          >
-            xxxx.xx.xx - yyyy.yy.yy
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === 'panel4'}
-        onChange={handleChange('panel4')}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
-        >
-          <Typography
-            className="!text-2xl"
-            sx={{ width: '75%', flexShrink: 0 }}
-          >
-            Personal data
-          </Typography>
-          <Typography
-            className="!text-lg"
-            sx={{ color: 'text.secondary' }}
-          >
-            xxxx.xx.xx - yyyy.yy.yy
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
-            sit amet egestas eros, vitae egestas augue. Duis vel est augue.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      {workList &&
+        workList.map((work, index) => {
+          return (
+            // <ImgCard
+            //   key={index.toString()}
+            //   name={item.id}
+            //   item={item.data}
+            // ></ImgCard>
+            <Accordion
+              key={index.toString()}
+              name={work.id}
+              item={work.data}
+              expanded={expanded === index}
+              onChange={handleChange(index)}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                <Typography
+                  className="!text-2xl"
+                  sx={{ width: '20%', flexShrink: 0 }}
+                >
+                  {work.id}
+                </Typography>
+
+                <Typography
+                  className="!text-2xl"
+                  sx={{ width: '60%', flexShrink: 0 }}
+                >
+                  {work.data.title}
+                </Typography>
+
+                <Typography
+                  className="!text-lg"
+                  sx={{ color: 'text.secondary' }}
+                >
+                  {new Date(work.data.start.seconds * 1000).toLocaleString(
+                    'ko-KR',
+                    {
+                      year: 'numeric',
+                      month: 'numeric',
+                    }
+                  )}{' '}
+                  ~
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{work.data.description}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          )
+        })}
     </div>
   )
 }

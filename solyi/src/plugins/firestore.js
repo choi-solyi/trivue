@@ -34,6 +34,25 @@ export async function findProjectList() {
     console.log('Error:', e)
   }
 }
+
+export async function findWorkList() {
+  const db = getFirestore(app)
+  const workList = []
+  // const storage = getStorage()
+  try {
+    //getDocs
+    const workRef = collection(db, 'solyi', 'portfolio', 'work')
+    const q = query(workRef, orderBy('start', 'desc'))
+    const querySnapshot = await getDocs(q)
+    querySnapshot.forEach(doc => {
+      workList.push({ id: doc.id, data: doc.data() })
+    })
+
+    return workList
+  } catch (e) {
+    console.log('Error:', e)
+  }
+}
 export async function insertProject() {
   const db = getFirestore(app)
   try {
