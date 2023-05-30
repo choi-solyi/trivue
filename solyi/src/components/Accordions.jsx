@@ -12,12 +12,8 @@ const Accordions = ({ type }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // 데이터 가져오기 예시 (비동기 작업)
       const list = await findWorkList()
-
-      console.log(list)
-
-      setWorkList(list) // 상태 값 변경
+      setWorkList(list)
     }
     fetchData()
   }, [])
@@ -46,22 +42,16 @@ const Accordions = ({ type }) => {
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
-                <Typography
-                  className="!text-2xl"
-                  sx={{ width: '20%', flexShrink: 0 }}
-                >
+                <Typography className="w-2/5 text-2xl sm:text-sm ">
                   {work.id}
                 </Typography>
 
-                <Typography
-                  className="!text-2xl"
-                  sx={{ width: '60%', flexShrink: 0 }}
-                >
+                <Typography className="w-3/5 text-2xl sm:text-sm">
                   {work.data.title}
                 </Typography>
 
                 <Typography
-                  className="!text-lg"
+                  className="w-1/5 text-xl sm:!text-xs"
                   sx={{ color: 'text.secondary' }}
                 >
                   {new Date(work.data.start.seconds * 1000).toLocaleString(
