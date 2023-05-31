@@ -26,7 +26,7 @@ export const Introduce = (): React.ReactElement => {
       <section className="section1">
         <div className="info_container flex-container flex-col">
           <div className="line_second text-align-center">
-            Intoduction
+            About Me
           </div>
           {introduce.introduce.map((item,idx1)=>{
             return (<React.Fragment key={idx1}>
