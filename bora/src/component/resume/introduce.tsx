@@ -31,7 +31,8 @@ export const Introduce = (): React.ReactElement => {
           {introduce.introduce.map((item,idx1)=>{
             return (<React.Fragment key={idx1}>
               <h3>{item.title}</h3>
-              {item.content.map((el,idx2)=> <div className='flex-container pdb10'><div className='pdl20' key={idx2}>• </div><div className='pdl10'>{el}</div></div>)}
+              {item.content.map((el,idx2)=> 
+              <div key={idx2} className='flex-container pdb10'><div className='pdl20'>• </div><div className='pdl10'>{el}</div></div>)}
             </React.Fragment>)
           })}
         </div>

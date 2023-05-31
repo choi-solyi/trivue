@@ -108,14 +108,14 @@ li{
   width: 100%;
   height: auto;
   background-color: #ededed;
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .section2{
   width: 100%;
   height: auto;
   background-color: #f5f5f5;
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .middle {
@@ -144,6 +144,9 @@ li{
 .pdb20{
   padding-bottom: 20px;
 }
+.pdb30{
+  padding-bottom: 30px;
+}
 
 .pdl5{
   padding-left: 5px;
@@ -157,4 +160,11 @@ li{
 
 .text-align-center {
   text-align: center;
+}
+
+.mgt30{
+  margin-top: 30px;
+}
+.mgb30{
+  margin-bottom: 30px;
 }

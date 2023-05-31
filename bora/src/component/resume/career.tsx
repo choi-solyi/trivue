@@ -50,13 +50,11 @@ const Panel = ({ content }): React.ReactElement => {
         <Typography variant="h5" component="div">
           {content.project}
         </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" className='pdb20' gutterBottom>
         [{content.position}] {content.period}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        </Typography>
         <Typography variant="body2">
-          {content.content.map((item,index)=><div key={index}>• {item}</div>)}
+          {content.content.map((item,index)=><div className='pdb10' key={index}>• {item}</div>)}
         </Typography>
       </CardContent>
     </Card>
@@ -89,7 +87,10 @@ const Career = (): React.ReactElement => {
 
   return (
     <div style={{ width: "100%", backgroundColor: "#ededed" }}>
-      <Box sx={{ width: "70%", margin: "0 auto" }}>
+      <div className="line_second">
+        Career
+      </div>
+      <Box sx={{ width: "70%", margin: "0 auto"}}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={tabNumber}

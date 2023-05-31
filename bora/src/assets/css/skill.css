@@ -16,7 +16,9 @@
 .line_second {
   font-size: 30px;
   font-weight: bold;
-  padding-bottom: 15px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .skill_card{
