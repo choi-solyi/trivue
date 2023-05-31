@@ -168,3 +168,14 @@ li{
 .mgb30{
   margin-bottom: 30px;
 }
+
+@media ( max-width: 1024px ) {
+  .section1{
+    margin: 0;
+    width: 100%;
+  }
+  
+  .section2{
+    margin: 0;
+  }
+}

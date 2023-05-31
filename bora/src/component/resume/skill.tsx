@@ -27,7 +27,7 @@ export const Skill = (): React.ReactElement => {
         <div className="line_second">
           Programming Language Skills
         </div>
-        <div className="skill_card flex-col items-center justify-start gap-10">
+        <div className="skill_card gap-10">
           {skill.language.map((item, idx) =>(<Card key={idx} languageItem={item}/>))}
         </div>
       </section>

@@ -1,3 +1,20 @@
-.introduce_content {
-  padding-left: 30px;
+.introduce_content{
+  width:60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media ( max-width: 1024px ) {
+  .introduce_content{
+    min-width: 400px;
+    margin: 0 auto ;
+  }
+}
+@media ( max-width: 400px ) {
+  .introduce_content{
+    min-width: 350px;
+    margin: 0 auto ;
+  }
 }

@@ -10,7 +10,6 @@
   color: #173ed9;
   font-size: 12px;
   font-weight: bold;
-  line-height: 3px;
 }
 
 .line_second {
@@ -26,6 +25,7 @@
   justify-content: center;
   flex-direction: row;
   padding-bottom: 60px;
+  align-items: center;
 }
 
 .card_container{
@@ -41,4 +41,18 @@
   width: 100%;
   text-align: center;
   padding: 5;
+}
+
+@media ( max-width: 1024px ) {
+  .skill_card {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    text-align: center;
+  }
+  .line_first{
+    width: 240px;
+    margin: 0 auto;
+  }
 }

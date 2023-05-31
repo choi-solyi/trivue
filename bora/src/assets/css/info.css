@@ -1,6 +1,9 @@
 .info_container{
   width:60%;
   margin: 0 auto;
+  min-width: 1024px;
+  display: flex;
+  justify-content: center;
 }
 .img_container {
   margin: 0 auto;
@@ -22,5 +25,17 @@ img {
   padding-left: 30px;
   width: auto;
   margin: auto;
-  text-align: center;
+}
+
+@media ( max-width: 1024px ) {
+  .info_container{
+    display: inline;
+  }
+  .info_zone {
+    max-width: 500px;
+    padding-top: 30px;
+  }
+  img {
+    width: 400px;
+  }
 }

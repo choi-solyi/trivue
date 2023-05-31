@@ -45,7 +45,7 @@ const a11yProps = (index: number) => {
 
 const Panel = ({ content }): React.ReactElement => {
   return (
-    <Card sx={{ maxWidth: "70%", margin: "0 auto" }}>
+    <Card sx={{ margin: "0 auto", maxWidth:'60%', minWidth:400 }}>
       <CardContent>
         <Typography variant="h5" component="div">
           {content.project}
@@ -54,7 +54,7 @@ const Panel = ({ content }): React.ReactElement => {
         [{content.position}] {content.period}
         </Typography>
         <Typography variant="body2">
-          {content.content.map((item,index)=><div className='pdb10' key={index}>• {item}</div>)}
+          {content.content.map((item,index)=><div className='flex-container pdb10' key={index}><div>•</div><div className='pdl10'>{item}</div></div>)}
         </Typography>
       </CardContent>
     </Card>
@@ -86,11 +86,11 @@ const Career = (): React.ReactElement => {
   };
 
   return (
-    <div style={{ width: "100%", backgroundColor: "#ededed" }}>
+    <div className='career_container'>
       <div className="line_second">
         Career
       </div>
-      <Box sx={{ width: "70%", margin: "0 auto"}}>
+      <Box sx={{ margin: "0 auto"}}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={tabNumber}
@@ -119,6 +119,7 @@ const Career = (): React.ReactElement => {
           <Button size="small">home page</Button>
         </CardActions>
       </Box>
+      
     </div>
   );
 };

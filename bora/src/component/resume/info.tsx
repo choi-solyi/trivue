@@ -24,19 +24,19 @@ export const Info = ({ path }): React.ReactElement => {
   return (
     <>
       <section className="section1">
-        <div className="info_container flex-container justify-center">
+        <div className="info_container">
           <div className="photo_zone">
             <div className="img_container">
               <img src={path} alt="myPhoto" />
             </div>
           </div>
           <div className="info_zone">
-            <h1>{info.title}</h1>
+            <h1>Bora YANG</h1>
             <h3>{info.position}</h3>
             <h4>phone : {info.phone}</h4>
             <h4>eamil : {info.email}</h4>
           </div>
-          <div className="info_zone" style={{textAlign:'left'}}>
+          <div className="info_zone">
             <h1>Abilities</h1>
             <div dangerouslySetInnerHTML={{__html:info.content}} style={{lineHeight:1.7}}></div>
           </div>
