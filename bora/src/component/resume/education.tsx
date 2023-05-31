@@ -47,7 +47,7 @@ const EducationTable = ({education}) =>{
       <TableHead>
         <TableRow>
           <TableCell>재학기간</TableCell>
-          <TableCell align="right">학교명</TableCell>
+          <TableCell>학교명</TableCell>
           <TableCell align="right">구분</TableCell>
         </TableRow>
       </TableHead>
@@ -60,7 +60,7 @@ const EducationTable = ({education}) =>{
             <TableCell component="th" scope="row">
               {row.period}
             </TableCell>
-            <TableCell align="right">{row.school}</TableCell>
+            <TableCell>{row.school}</TableCell>
             <TableCell align="right">{row.graduation ? '졸업':'-'}</TableCell>
           </TableRow>
         ))}
