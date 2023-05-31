@@ -1,5 +1,5 @@
 import { Education } from './education';
-import { ICareer, IEducation, IInfo, ISkill } from './resume.type';
+import { ICareer, IEducation, IInfo, IIntroduce, ISkill } from './resume.type';
 import react from '../../assets/svg/react.svg'
 import js from '../../assets/svg/js.svg'
 import ts from '../../assets/svg/ts.svg'
@@ -66,6 +66,15 @@ export const EDUCATION_INITIAL_VALUE:IEducation = {
       period: '',
       school:'',
       graduation: false,
+    }
+  ]
+}
+
+export const INTRODUCE_INITIAL_VALUE:IIntroduce ={
+  introduce:[
+    {
+      title:'',
+      content:[]
     }
   ]
 }

@@ -51,7 +51,7 @@ const Panel = ({ content }): React.ReactElement => {
           {content.project}
         </Typography>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        ({content.position}) {content.period}
+        [{content.position}] {content.period}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
         </Typography>
@@ -105,7 +105,7 @@ const Career = (): React.ReactElement => {
             <TabPanel value={tabNumber} index={idx}>
               <div className="line_first" style={{textAlign:'center'}}>{item.companyIntro}</div>
             </TabPanel>
-            {item.contents.map((conent, idx2) =>{
+            {item.contents.sort(({period:a},{period:b})=>b.localeCompare(a,'en',{numeric:true})).map((conent, idx2) =>{
               return (
                 <TabPanel key={idx2} value={tabNumber} index={idx}>
                   <Panel content={conent} />

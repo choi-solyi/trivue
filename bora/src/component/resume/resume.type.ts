@@ -39,3 +39,12 @@ interface IEducationContents {
   period: string;
   graduation: boolean;
 }
+
+export interface IIntroduce {
+  introduce: IIntroduceContents[];
+}
+
+interface IIntroduceContents {
+  title: string;
+  content: string[];
+}

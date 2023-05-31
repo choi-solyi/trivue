@@ -21,7 +21,6 @@ export const Education = (): React.ReactElement => {
 
   React.useEffect(() => {
     handleVerifyScheduleLog();
-    console.log(education)
   }, []);
 
   if (!education) {
@@ -31,11 +30,8 @@ export const Education = (): React.ReactElement => {
   return (
     <>
       <section className="section2">
-        <div className="skill_explain flex-container flex-col">
-          <div className="line_first">WHERE I LEARN FROM</div>
-          <div className="line_second">
-            History of Education
-          </div>
+        <div className="line_second text-align-center">
+          History of Education
         </div>
         <div className='info_container' style={{paddingBottom: 70}}>
           <EducationTable education={education.education}/>
@@ -56,7 +52,7 @@ const EducationTable = ({education}) =>{
         </TableRow>
       </TableHead>
       <TableBody>
-        {education.map((row,idx) => (
+        {education.sort(({ period: a }, { period: b }) => a.localeCompare(b, 'en', { numeric: true })).map((row,idx) => (
           <TableRow
             key={idx}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

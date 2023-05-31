@@ -5,6 +5,7 @@ import { Skill } from "./skill";
 import Career from "./career";
 import photoPath from "../../assets/image/photo.jpg";
 import { Education } from './education';
+import { Introduce } from './introduce';
 
 export const Resume = (): React.ReactElement => {
   return (
@@ -13,6 +14,7 @@ export const Resume = (): React.ReactElement => {
       <Skill />
       <Career />
       <Education />
+      <Introduce />
     </>
   );
 };

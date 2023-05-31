@@ -1,7 +1,5 @@
 import React from "react";
 import "../../assets/css/skill.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { getCollectionData } from '../../pugins/firestore';
 import { SKILL_INITIAL_VALUE, path } from './resume.constants';
 
@@ -27,7 +25,6 @@ export const Skill = (): React.ReactElement => {
     <>
       <section className="section2 middle">
         <div className="skill_explain flex-container flex-col">
-          <div className="line_first">WHAT I USE TO TELL SOFTWARE</div>
           <div className="line_second">
             Programming Language Skills
           </div>

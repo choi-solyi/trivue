@@ -27,7 +27,6 @@ li{
 
 .navbar_logo {
   font-size: 24px;
-  
 }
 
 .navbar_menu > ul {
@@ -107,14 +106,16 @@ li{
 
 .section1{
   width: 100%;
-  height: 340px;
+  height: auto;
   background-color: #ededed;
+  padding: 50px 0;
 }
 
 .section2{
   width: 100%;
-  min-height: 150px;
+  height: auto;
   background-color: #f5f5f5;
+  padding: 50px 0;
 }
 
 .middle {
@@ -152,4 +153,8 @@ li{
 }
 .pdl20{
   padding-left: 20px;
+}
+
+.text-align-center {
+  text-align: center;
 }
