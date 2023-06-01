@@ -53,7 +53,9 @@ const EducationTable = ({education}) =>{
           </TableRow>
         </TableHead>
         <TableBody>
-          {education.sort(({ period: a }, { period: b }) => a.localeCompare(b, 'en', { numeric: true })).map((row,idx) => (
+          {education
+          .sort(({ period: a }, { period: b }) => a.localeCompare(b, 'en', { numeric: true }))
+          .map((row,idx) => (
             <TableRow
               key={idx}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

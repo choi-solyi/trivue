@@ -55,7 +55,8 @@ const Panel = ({ content }): React.ReactElement => {
           [{content.position}] {content.period}
           </Typography>
           <Typography variant="body2">
-            {content.content.map((item,index)=><div className='flex-container pdb10' key={index}><div>•</div><div className='pdl10'>{item}</div></div>)}
+            {content.content
+            .map((item,index)=><div className='flex-container pdb10' key={index}><div>•</div><div className='pdl10'>{item}</div></div>)}
           </Typography>
         </CardContent>
       </Card>
@@ -105,17 +106,19 @@ const Career = (): React.ReactElement => {
         </Box>
         {career.companyInfo.map((item, idx) => {
           return <React.Fragment key={idx}>
-            <TabPanel value={tabNumber} index={idx}>
-              <div className="line_first" style={{textAlign:'center'}}>{item.companyIntro}</div>
-            </TabPanel>
-            {item.contents.sort(({period:a},{period:b})=>b.localeCompare(a,'en',{numeric:true})).map((conent, idx2) =>{
-              return (
-                <TabPanel key={idx2} value={tabNumber} index={idx}>
-                  <Panel content={conent} />
-                </TabPanel>
-              )
-            })}
-          </React.Fragment>
+                  <TabPanel value={tabNumber} index={idx}>
+                    <div className="line_first" style={{textAlign:'center'}}>{item.companyIntro}</div>
+                  </TabPanel>
+                  {item.contents
+                  .sort(({period:a},{period:b})=>b.localeCompare(a,'en',{numeric:true}))
+                  .map((conent, idx2) =>{
+                    return (
+                      <TabPanel key={idx2} value={tabNumber} index={idx}>
+                        <Panel content={conent} />
+                      </TabPanel>
+                    )
+                  })}
+                </React.Fragment>
         })}
         <CardActions>
           <Button size="small">home page</Button>
