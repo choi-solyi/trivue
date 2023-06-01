@@ -45,19 +45,21 @@ const a11yProps = (index: number) => {
 
 const Panel = ({ content }): React.ReactElement => {
   return (
-    <Card sx={{ margin: "0 auto", maxWidth:'60%', minWidth:400 }}>
-      <CardContent>
-        <Typography variant="h5" component="div">
-          {content.project}
-        </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" className='pdb20' gutterBottom>
-        [{content.position}] {content.period}
-        </Typography>
-        <Typography variant="body2">
-          {content.content.map((item,index)=><div className='flex-container pdb10' key={index}><div>•</div><div className='pdl10'>{item}</div></div>)}
-        </Typography>
-      </CardContent>
-    </Card>
+    <div className='career_box'>
+      <Card variant="outlined" sx={{display:'inline-block', width:'100%'}}>
+        <CardContent>
+          <Typography variant="h5" component="div">
+            {content.project}
+          </Typography>
+          <Typography sx={{ fontSize: 14 }} color="text.secondary" className='pdb20' gutterBottom>
+          [{content.position}] {content.period}
+          </Typography>
+          <Typography variant="body2">
+            {content.content.map((item,index)=><div className='flex-container pdb10' key={index}><div>•</div><div className='pdl10'>{item}</div></div>)}
+          </Typography>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 

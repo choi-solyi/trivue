@@ -3,13 +3,12 @@
   background-color: #ededed;
 }
 .career_box{
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
-
 @media ( max-width: 1024px ) {
   .career_box{
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 }

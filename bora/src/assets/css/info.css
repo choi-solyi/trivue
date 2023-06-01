@@ -36,6 +36,16 @@ img {
     padding-top: 30px;
   }
   img {
-    width: 400px;
+    width: 300px;
   }
+  .photo_zone{
+    padding:0px
+  }
+}
+@media ( max-width: 500px ) {
+
+  img {
+    width: 85%;
+  }
+
 }
