@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,14 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+@import 'react-date-range/dist/styles.css';
+@import 'react-date-range/dist/theme/default.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+* {
+  /* font-family: 'IBM Plex Sans KR'; */
+  font-family: 'Nanum Gothic Coding';
 }
