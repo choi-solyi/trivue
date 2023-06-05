@@ -1,0 +1,62 @@
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.contents {
+  margin: 40px 15% 0 15%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.about-me {
+  margin-top: 20%;
+  font-size: 70px;
+}
+
+.underline {
+  border-bottom: 6px solid #4EE1A0;
+
+}
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 35px;
+  margin-bottom: 65px;
+}
+
+.skills {
+  width: 100%;
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+
+.skill-item {
+  width: 25%;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.projects {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  margin-bottom: 80px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
