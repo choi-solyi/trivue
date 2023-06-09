@@ -1,0 +1,69 @@
+////// tmp
+:root {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.contents {
+  margin: 40px 15% 0 15%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.about-me {
+  margin-top: 20%;
+  font-size: 70px;
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 35px;
+  margin-bottom: 65px;
+}
+//////
+
+// default
+section {
+  display: block;
+}
+
+.work {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#resume h1 {
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#resume h1 span {
+  border-bottom: 3px solid #11abb0;
+  padding-bottom: 6px;
+}
+
+#resume h3 {
+  font: 25px/30px "opensans-bold", sans-serif;
+}
+
+#resume .info {
+  font: 16px/24px "librebaskerville-italic", serif;
+  color: #6e7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#resume .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#resume .date {
+  font: 15px/24px "opensans-regular", sans-serif;
+  margin-top: 6px;
+}
