@@ -1,11 +1,14 @@
 import { useState } from 'react'
 
-import TextField from '@mui/material/TextField'
-import IconButton from '@mui/material/IconButton'
-import Fingerprint from '@mui/icons-material/Fingerprint'
+// import TextField from '@mui/material/TextField'
+// import IconButton from '@mui/material/IconButton'
+// import Fingerprint from '@mui/icons-material/Fingerprint'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import { useNavigate } from 'react-router'
 
 import logo from '../../assets/logo/simple-light-logo.png'
+import { Button, IconButton } from '@mui/material'
 
 const AppBar = () => {
   const [coin, setCoin] = useState('')
@@ -44,7 +47,18 @@ const AppBar = () => {
             />
           </a>
         </div>
-        <div className="my-auto ">
+
+        <div className="my-auto">
+          <Button className="!text-base !tracking-wider !leading-4 !text-black hover:!text-my-color-1" >About</Button>
+          <Button className="!text-base !tracking-wider !leading-4 !text-black hover:!text-my-color-1" variant="text">Tech Stack</Button>
+          <Button className="!text-base !tracking-wider !leading-4 !text-black hover:!text-my-color-1" variant="text">Projects</Button>
+          <Button className="!text-base !tracking-wider !leading-4 !text-black hover:!text-my-color-1" variant="text">Contact</Button>
+          <IconButton><GitHubIcon/></IconButton>
+          <IconButton><HistoryEduIcon/></IconButton>
+        </div>
+
+
+        {/* <div className="my-auto ">
           <TextField
             size="small"
             id="inputcoin"
@@ -53,15 +67,15 @@ const AppBar = () => {
             onKeyDown={onKeyDownHandler}
             onChange={val => setCoin(val)}
           />
-        </div>
-        <IconButton
+        </div> */}
+        {/* <IconButton
           className="order-last sm:px-5 xs:py-2"
           aria-label="fingerprint"
           color="secondary"
           onClick={check}
         >
           <Fingerprint />
-        </IconButton>
+        </IconButton> */}
       </nav>
     </header>
   )

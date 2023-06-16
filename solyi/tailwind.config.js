@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'my-bg-color': '#FFF7F0',
+        'my-bg-color': '#FFFFFF',
         'my-color-1': '#755CDE',
         'my-color-2': '#F6A560',
         'my-color-3': '#F39E9E',

@@ -1,4 +1,4 @@
-import snowimg from '../../assets/snow.jpg'
+//import snowimg from '../../assets/snow.jpg'
 const Imgs = props => {
   return (
     <div className="mx-4 xl:mx-60 lg:mx-24 md:mx-16 sm:mx-6">
@@ -8,7 +8,7 @@ const Imgs = props => {
           py-36 px-4 border rounded-lg lg:bg-top 
           md:bg-[center_top_-10rem] sm:bg-[center_top_-10rem]"
           style={{
-            backgroundImage: `url(${snowimg})`,
+           // backgroundImage: `url(${snowimg})`,
             backgroundSize: 'cover',
           }}
         ></div>
