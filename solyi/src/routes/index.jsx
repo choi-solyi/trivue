@@ -5,6 +5,7 @@ import Create from '../pages/Create/Create'
 // import Contact from '../pages/Contact/Contact';
 import NotFound from '../pages/NotFound/NotFound'
 import WeAre from '../pages/WeAre/WeAre'
+import BookList  from '../pages/Book/BookList'
 
 const App = () => {
   return (
@@ -26,6 +27,11 @@ const App = () => {
           <Route
             path="/WeAre/*"
             element={<WeAre />}
+          />
+          
+          <Route
+            path="/BookList/*"
+            element={<BookList />}
           />
         </Route>
       </Routes>
