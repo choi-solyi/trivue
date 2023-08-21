@@ -5,7 +5,7 @@ import Create from '../pages/Create/Create'
 // import Contact from '../pages/Contact/Contact';
 import NotFound from '../pages/NotFound/NotFound'
 import WeAre from '../pages/WeAre/WeAre'
-import BookList  from '../pages/Book/BookList'
+import Fav  from '../pages/Fav/Fav'
 
 const App = () => {
   return (
@@ -30,9 +30,13 @@ const App = () => {
           />
           
           <Route
+            path="/Fav/*"
+            element={<Fav />}
+          />
+          {/* <Route
             path="/BookList/*"
             element={<BookList />}
-          />
+          /> */}
         </Route>
       </Routes>
     </BrowserRouter>

@@ -6,6 +6,7 @@ import {
   getDoc,
   getDocs,
   query,
+  where,
   collection,
   setDoc,
   orderBy,
@@ -71,5 +72,61 @@ export async function insertProject() {
     console.log('Error:', e)
   }
 }
+
+export async function findFavList() {
+  const db = getFirestore(app)
+  const favList = []
+  try {
+
+    const projectRef = collection(db, 'solyi', 'fav', 'fav')
+    const q = query(projectRef, where("deleted", "==", false));
+
+
+    const querySnapshot = await getDocs(q)
+    querySnapshot.forEach(doc => {
+      favList.push({ id: doc.id, data: doc.data() })
+    })
+    
+    return favList
+  } catch (e) {
+    console.log('Error:', e)
+  }
+}
+
+export async function insertFav(name, url) {
+  const db = getFirestore(app)
+  try {
+    const docData = {
+      name,
+      url,
+      deleted:false
+    }
+
+    await setDoc(
+      doc(db, 'solyi', 'fav', 'fav', name),
+      docData
+    )
+  } catch (e) {
+    console.log('Error:', e)
+  }
+}
+
+export async function updateFav(name, url) {
+  const db = getFirestore(app)
+  try {
+    const docData = {
+      name,
+      deleted: true
+    }
+
+    await setDoc(
+      doc(db, 'solyi', 'fav', 'fav', name),
+      docData
+    )
+  } catch (e) {
+    console.log('Error:', e)
+  }
+}
+
 // findProjectList()
 // insertProject()
